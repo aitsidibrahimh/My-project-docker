@@ -4,3 +4,11 @@ services:
     image: nginx
     ports:
       - "80:80"
+      
+      db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: user
